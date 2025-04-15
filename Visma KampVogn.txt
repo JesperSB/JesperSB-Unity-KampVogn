@@ -1,0 +1,132 @@
+
+Del 1: Kampvogn
+
+Tag filen 'Kampvogn' og lige ind i 'Assets'.
+Den kasse i bunden af Unity.
+
+Først skal du importere farverne på kampvognen.
+Tryk på kampvognen i bunden, og der kommer noget til højre i 'Inspector' kassen.
+Tryk på 'Materials', og ændre øverste linje til 'Standard (Legacy).
+Location, skal ændres til Use External Materils (Legacy)
+Og Naming skal hedde 'From Model's Material'
+Så skal du trykke på 'Apply', og den finder de rigtige farver.
+
+Når det er færdigt, så trækker du kampvognen fra 'Assets' op på kortet.
+Du burde se den på listen på venstre side, som en blå line som hedder KampVogn.
+
+Tryk med venstre mus på den, og og gå ind i 'Prefab', og 'Unpack' den.
+Så skilder du dele fra hinanden.
+
+Nu skal du så åbne kampvognen og de dele den består af.
+Du trykker på den grå pil til venstre for navnet.
+Og hvis du har gjort det rigtigt, kan du se flere forskellige ting fra pakken.
+
+Du skal slette alt andet end 'KampVogn' og 'KanonTårn'.
+
+Nu skal du finde det script som hedder KampVognStyr.
+Først skal du ligge det ned i Assets, som med kampvognen...
+Og så skal du trækker det over på KampVognen's øverste del.
+
+Klik på Kameraet, og sigt det efter kampvognen.
+Når kameraet peger på kampvognen, så kan du starte spillet, ved at trykke på play knappen øverste i midten.
+
+For at se fra KampVognen's vinkle skal du tage kameret og trækker over på Kampvognen.
+Ret det til, så det peger frem ad, og så start spillet igen.
+
+
+Del 2: Omverden
+
+Så mangler du noget at kører på...
+Tryk på '+' tegnet til venstre over listen med kampvogn.
+I 3D Object, Find en 'Plane' og sæt den ind i verdenen.
+
+Du kan ændre på Overfladen, og gør den større, ved at ændre på 'Scale'.
+Tryk på 'Plane' til venstre og det kommer en 'Inspector' på højre side.
+Der kan du ændre på 'Scale', måske gøre den 10X større.
+
+Så mangler du Tyndgekraft på din kampvogn.
+Tryk på Kampvognen på den venstre liste.
+Og til højre i 'Inspector' kommer den detaljer.
+
+Her burde står det Script du har lagt på den.
+Nederst står der 'Add Component'.
+Tryk på den og find en 'Box Collider'.
+
+Så skal du finde 'Edit Collider' firkanten og trykke på det.
+Nu kan du se en grøn boks rundt om din kampvogn.
+Trække i boksen indtil den dækker hele den kampvogn.
+Dette er den kampvogns overflade. 
+
+Så skal du tilføje tyndgekraft.
+Tryk nederste på 'Add Component' igen og find den ting som hedder 'RigidBody'.
+Nu her du en boks som definere din kampvogn, og den har tyndge.
+
+Tryk på Play igen, og se hvad der har ændred sig.
+
+Del 3: Skyde Funktion
+
+Nu skal vi gøre at den kan skyde.
+Tryk på '+' til venstre, og inde i '3d Object', find en 'Sphere'.
+Dette er bare en kugle, som hedder 'Sphere'.
+Træk den ned på 'Asset' Kassen forneden.
+Nu skifter den farve på listen til blå, fordi det er blevet en Prefab.
+Så kan vi brug den igen og igen, som en kugle jo skal bruges.
+Du kan slette den oppe på listen.
+
+Over på Kampvognen skal du lave et punkt som den skyder fra.
+Venstre Tryk på Kampvognen på listen, og lave en 'Create Empty'.
+Dette er bare et tom object 'GameObject', som peger en tilfældig retning.
+Træk det rundt på din kampvogn, så det kommer til at sidde foran løbet.
+
+Så skal vi gøre scriptet klart.
+Åben det, og fjern de to '//' foran 'public GameObject LøbPåTårn' og 'public GameObject Kugle'.
+Så skal du gemme scriptet ved at trykke på Shift-S.
+Gå ind i Unity igen, og ser om der er nogle fejl.
+
+Hvis du ikke har nogle fejl, så skal du sætte de to ting du har lavet, over på scriptet.
+Klik på KampVognen, og kig på 'Inspector' til Højre, og på script'et som sidder på den.
+Der burde nu var to Tomme linjer, som hedder LøbPåTårn og Kugle.
+Så tager du kuglen, den som ligger nede på 'Assets', og trækker den hen på scriptet.
+Og så tager på Det 'GameObject' som er der hvor du skyder med, og trækker den hen på Scriptet.
+
+Tryk på Play knappen, og kører lidt rundt, og skyd kuglen.
+Den hænger bare i luften...
+
+Der burde også ligge et script som hedder 'Kugle'.
+Den skal trækkes hen til det 'Sphere', som ligger i 'Assets'
+Når du trykker på Play knappen, så begynder kuglen at flyve.
+Om du så må rette på retningen som kugle flyver..
+
+Så skal du finde den lyd som du skal bruge for din kugle.
+Du skal trække den hen på den 'Sphere', som ligger i 'Assets'.
+Så skal du trykke på Play igen, og se om den begynder at sige en lyd, når du skyder med kampvognen.
+
+Del 4: point
+
+Så skal vi lave en måde at score point på.
+
+Lave en firkant.
+Tryk på '+' til venstre, og find '3D Object' og 'Cube'.
+Du kan ændre størrelse og farve på den, så den er nemmere at finde og ramme.
+
+Så skal du trække scriptet 'SkydeSkive' hen på det.
+Nu kan du start spillet igen, og prøve at skyde mod det objekt.
+Der burde komme en 'Point:  0' i Øverste Venstre hjørne.
+Hvis den ikke tæller så prøve at kører din kampvogn ind i den.
+
+Du skal sætte et component på den, som hedder RigidBody.
+Tryk på målskiven, og på højre side, Nederst står der 'Add Component'.
+Tryk på den og find en 'RigidBody'.
+Når den er blevet sat på Skydeskiven så begynder den at opdage når den er blevet ramt.
+Tyndgekraften på virker den også, så hvis du påkører den så flyver den en tur.
+
+Start spillet igen, og skyd mod målskiven.
+
+
+
+
+
+
+
+
+
